@@ -8,15 +8,19 @@ This is an implementation of the K-Means clustering algorithm, written in Python
 - numpy
 - matplotlib
 - scikit-learn
+
 ## Usage
-**python k_means.py [Options] [Resource path] [Result path]**
+**python K_Means.py [Options] [Resource path] [Result path]**
+
 ## Required options
 - **-r, --row** Set rows
 - **-c, --col** Set cols
 - **-k** Set target clusters
 - **-n, --name** Set output name
+
 ## Unnecessary options
 - **-h, --help** Show help information
+
 ## Implementation
 The algorithm consists of the following steps:
 
@@ -33,9 +37,10 @@ The algorithm consists of the following steps:
 - **_dimReduction(allPoint: np.ndarray)**: reduce the dimension of the data to 2D using t-SNE.
 - **_text(centroid: np.ndarray, cluster: np.ndarray)**: output the result to a text file.
 - **_picture(data: np.ndarray, centroid: np.ndarray)**: output the result to a picture file.
+
 ## Example
 ```
-from k_means import K_Means
+from K_Means import K_Means
 
 if __name__ == "__main__":
     K_Means(150, 4, 3, "data.xlsx", "result", "output")
