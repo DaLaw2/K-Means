@@ -18,6 +18,9 @@ This is an implementation of the K-Means clustering algorithm, written in Python
 - **-k** Set target clusters
 - **-n, --name** Set output name
 
+### Note
+- If the dimension of the data set is greater than 3, at least 50 data points are required.
+
 ## Unnecessary options
 - **-h, --help** Show help information
 
