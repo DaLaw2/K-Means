@@ -269,12 +269,10 @@ if __name__ == "__main__":
     inputResourcePath: str = sys.argv[-2]
     inputResultPath: str = sys.argv[-1]
 
-    # Set log file store space
-    logging.basicConfig(filename=os.path.join(gResultPath, f"{inputResultName}.log"), level=logging.ERROR)
-
     # Execute main function
     try:
         K_Means(inputRow, inputCol, inputK, inputResourcePath, inputResultPath, inputResultName)
     except Exception as e:
-        logging.error("An unhandled exception occurred", e)
-        logging.error(traceback.format_exc())
+        with open(os.path.join(gResultPath, f"{inputResultName}.log"), 'w') as logFile:
+            logFile.write(traceback.format_exc())
+            logFile.close()
